@@ -1,0 +1,3 @@
+# Cloudflare Pages / Netlify. Keeps the CV (it contains contact details) out of search results.
+/Tomas_Musil_CV.pdf
+  X-Robots-Tag: noindex
