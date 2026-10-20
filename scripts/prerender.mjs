@@ -5,13 +5,15 @@ import { mkdir, readFile, rm, writeFile } from 'node:fs/promises'
 const ssr = await import('../dist-ssr/entry-server.js')
 const template = await readFile('dist/index.html', 'utf8')
 const site = ssr.siteUrl.replace(/\/$/, '')
+if (site && !/^https?:\/\/[^\s"'<>]+$/.test(site)) throw new Error(`VITE_SITE_URL is not a valid URL: ${site}`)
 
 const pages = { cs: 'dist/index.html', en: 'dist/en/index.html' }
 for (const [lang, file] of Object.entries(pages)) {
+  // Function replacements, so a `$&` etc. in the content can't be read as a replacement pattern.
   const html = template
     .replace('<html lang="cs">', `<html lang="${lang}">`)
-    .replace('<!--app-head-->', ssr.headTags(lang, site))
-    .replace('<!--app-html-->', ssr.render(lang))
+    .replace('<!--app-head-->', () => ssr.headTags(lang, site))
+    .replace('<!--app-html-->', () => ssr.render(lang))
   await mkdir(file.slice(0, file.lastIndexOf('/')), { recursive: true })
   await writeFile(file, html)
 }

@@ -8,7 +8,7 @@ const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').repl
 // <head> tags for one language. Absolute-URL tags (canonical, hreflang, og:url, og:image) need the
 // production origin, so they're only emitted once VITE_SITE_URL is set.
 export function headTags(lang: Lang, siteUrl = ''): string {
-  const site = siteUrl.replace(/\/$/, '')
+  const site = esc(siteUrl.replace(/\/$/, ''))
   const other: Lang = lang === 'cs' ? 'en' : 'cs'
   const tags = [
     `<title>${esc(meta.title[lang])}</title>`,

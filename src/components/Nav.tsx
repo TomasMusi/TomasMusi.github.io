@@ -109,14 +109,15 @@ export function Nav() {
               href={langPath[l]}
               hrefLang={l}
               lang={l}
-              aria-label={langNames[l]}
               aria-current={lang === l ? 'true' : undefined}
               onClick={(e) => {
                 e.preventDefault()
                 setLang(l)
               }}
             >
+              {/* The accessible name must contain the visible "CS"/"EN" (WCAG 2.5.3). */}
               {l.toUpperCase()}
+              <span className="sr-only"> — {langNames[l]}</span>
             </a>
           ))}
         </div>

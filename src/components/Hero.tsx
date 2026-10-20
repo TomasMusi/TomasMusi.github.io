@@ -174,10 +174,10 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.6 }}
-        aria-label={t(ui.scroll)}
+        aria-label={`scroll — ${t(ui.scroll)}`}
       >
         <span className="hero__scroll-line" aria-hidden />
-        <span aria-hidden>scroll</span>
+        scroll
       </m.a>
     </section>
   )

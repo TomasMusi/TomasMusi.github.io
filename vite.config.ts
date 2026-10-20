@@ -51,7 +51,7 @@ function devHead(siteUrl: string): Plugin {
     apply: 'serve',
     transformIndexHtml(html, ctx) {
       const lang = /^\/en(\/|$)/.test(ctx.originalUrl ?? ctx.path) ? 'en' : 'cs'
-      return html.replace('<html lang="cs">', `<html lang="${lang}">`).replace('<!--app-head-->', headTags(lang, siteUrl))
+      return html.replace('<html lang="cs">', `<html lang="${lang}">`).replace('<!--app-head-->', () => headTags(lang, siteUrl))
     },
   }
 }

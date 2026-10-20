@@ -1,3 +1,15 @@
-# Cloudflare Pages / Netlify. Keeps the CV (it contains contact details) out of search results.
+# Cloudflare Pages / Netlify response headers.
+# style-src needs 'unsafe-inline': the stylesheet is inlined at build time and motion renders style="" attributes.
+# The JSON-LD <script type="application/ld+json"> is a data block, so script-src doesn't apply to it.
+/*
+  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; media-src 'self'; connect-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; object-src 'none'; upgrade-insecure-requests
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  X-Frame-Options: DENY
+  Cross-Origin-Opener-Policy: same-origin
+  Strict-Transport-Security: max-age=31536000
+
+# Keeps the CV (it contains contact details) out of search results.
 /Tomas_Musil_CV.pdf
   X-Robots-Tag: noindex
