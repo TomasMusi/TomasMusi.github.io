@@ -317,6 +317,8 @@ export const education = {
 
 export type Photo = { src: string; alt: T; tall?: boolean }
 
+// Order matters: the tall photos sit at positions 3, 6 and 10 so the 3-column dense grid packs into
+// exactly 5 full rows (and 7 rows on mobile, where the last tall one renders short).
 export const gallery: Photo[] = [
   { src: 'att-team', alt: { cs: 'AT&T Hackathon Junior 2025 — sledujeme prezentace', en: 'AT&T Hackathon Junior 2025 — watching the pitches' } },
   { src: 'pitch-2', alt: { cs: 'Prezentace řešení před porotou', en: 'Pitching our solution to the jury' } },
@@ -327,10 +329,9 @@ export const gallery: Photo[] = [
   { src: 'audience', alt: { cs: 'Publikum při vyhlášení', en: 'The audience during the announcement' } },
   { src: 'pitch-1', alt: { cs: 'Pitch s mikrofonem', en: 'Pitching with the mic' } },
   { src: 'organizer', alt: { cs: 'Úvodní slovo organizátora', en: 'Opening words from the organiser' } },
-  { src: 'lecture-1', alt: { cs: 'Zahájení v aule VUT', en: 'Opening in the VUT auditorium' } },
   { src: 'crowd', alt: { cs: 'Účastníci a mentoři', en: 'Participants and mentors' }, tall: true },
+  { src: 'lecture-1', alt: { cs: 'Zahájení v aule VUT', en: 'Opening in the VUT auditorium' } },
   { src: 'hall-1', alt: { cs: 'Hosté finále', en: 'Guests at the final' } },
-  { src: 'group-2', alt: { cs: 'Společná fotka před Onkologickým ústavem', en: 'Group photo in front of the Oncology Institute' } },
 ]
 
 export const ui = {
@@ -357,6 +358,8 @@ export const ui = {
   stats: {
     years: { cs: 'firmy, pro které jsem vyvíjel', en: 'companies I have shipped code for' },
     hacks: { cs: 'soutěže a hackathony', en: 'competitions & hackathons' },
+    projects: { cs: 'projekty, na kterých jsem pracoval', en: 'projects I have worked on' },
+    tech: { cs: 'technologií, se kterými pracuji', en: 'technologies I work with' },
   },
   team: { cs: 'Tým', en: 'Team' },
   education: { cs: 'Vzdělání', en: 'Education' },

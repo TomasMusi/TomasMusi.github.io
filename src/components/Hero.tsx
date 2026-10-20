@@ -131,12 +131,14 @@ export function Hero() {
               >
                 {t(ui.downloadCv)} <span aria-hidden>↓</span>
               </m.a>
-              <a href={profile.github} target="_blank" rel="noreferrer" className="icon-link" aria-label={`GitHub (${t(ui.newTab)})`}>
-                <GitHubIcon />
-              </a>
-              <a href={profile.linkedin} target="_blank" rel="noreferrer" className="icon-link" aria-label={`LinkedIn (${t(ui.newTab)})`}>
-                <LinkedInIcon />
-              </a>
+              <span className="hero__social">
+                <a href={profile.github} target="_blank" rel="noreferrer" className="icon-link" aria-label={`GitHub (${t(ui.newTab)})`}>
+                  <GitHubIcon />
+                </a>
+                <a href={profile.linkedin} target="_blank" rel="noreferrer" className="icon-link" aria-label={`LinkedIn (${t(ui.newTab)})`}>
+                  <LinkedInIcon />
+                </a>
+              </span>
             </div>
           </m.div>
         </div>
@@ -158,7 +160,7 @@ export function Hero() {
           <img
             src="/media/portrait.webp"
             srcSet="/media/portrait-sm.webp 360w, /media/portrait.webp 600w"
-            sizes="(max-width: 960px) 220px, 310px"
+            sizes="(max-width: 960px) 163px, 310px"
             alt={t(ui.portraitAlt)}
             width={600}
             height={600}

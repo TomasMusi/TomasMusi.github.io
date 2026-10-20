@@ -1,6 +1,6 @@
 import { m, useScroll, useTransform } from 'motion/react'
 import { useRef } from 'react'
-import { awards, jobs, ui } from '../content'
+import { awards, jobs, projects, skills, ui } from '../content'
 import { useLang } from '../lib/lang'
 import { inView, motionTokens, reveal, stagger } from '../lib/motion'
 import { useMotionPref } from '../lib/motion-pref'
@@ -11,6 +11,8 @@ export function Stats() {
   const items = [
     { value: <Counter to={jobs.length} />, label: t(ui.stats.years) },
     { value: <Counter to={awards.length} />, label: t(ui.stats.hacks) },
+    { value: <Counter to={projects.length} />, label: t(ui.stats.projects) },
+    { value: <Counter to={skills.flatMap((g) => g.items).length} />, label: t(ui.stats.tech) },
   ]
   return (
     <m.ul className="stats container" role="list" initial="hidden" whileInView="visible" viewport={inView} variants={stagger()}>
