@@ -81,7 +81,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: motionTokens.duration.slow }}
           >
-            <span className="dot dot--live" aria-hidden /> {t(ui.available)} · {t(profile.location)}
+            {t(profile.location)}
           </m.p>
 
           <h1 className="hero__name">

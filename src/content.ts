@@ -43,8 +43,8 @@ export const jobs: Job[] = [
     current: true,
     points: [
       {
-        cs: 'Stavím AI agenty, kteří automatizují zpracování insolvenčních spisů.',
-        en: 'Building AI agents that automate the processing of insolvency case files.',
+        cs: 'Stavím AI agenty, kteří automatizují právní workflow.',
+        en: 'Building AI agents that automate legal workflows.',
       },
       {
         cs: 'Vyvíjím frontend i backend interního softwaru, který používají právníci napříč celou firmou.',
@@ -343,7 +343,6 @@ export const ui = {
     contact: { cs: 'Kontakt', en: 'Contact' },
   },
   hello: { cs: 'Ahoj, jsem', en: "Hi, I'm" },
-  available: { cs: 'Otevřený novým projektům', en: 'Open to new projects' },
   downloadCv: { cs: 'Stáhnout CV', en: 'Download CV' },
   contactMe: { cs: 'Napiš mi', en: 'Get in touch' },
   sections: {
