@@ -63,7 +63,7 @@ function LinearPlayground() {
   )
 }
 
-// Expanding LoRa-style signal rings around a satellite that orbits a planet.
+// Expanding radio signal rings around a satellite that orbits a planet.
 function SignalViz() {
   const { t } = useLang()
   const ref = useRef<HTMLDivElement>(null)
@@ -82,7 +82,7 @@ function SignalViz() {
       {[0, 1, 2, 3].map((i) => (
         <span key={i} className="signal__ring" style={{ animationDelay: `${i * 0.8}s` }} />
       ))}
-      <span className="signal__label mono">{t(ui.loraLabel)}</span>
+      <span className="signal__label mono">{t(ui.signalLabel)}</span>
     </div>
   )
 }

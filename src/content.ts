@@ -196,8 +196,8 @@ export const projects: Project[] = [
     },
     body: [
       {
-        cs: 'Programoval jsem komunikační protokoly pro firmware satelitu a implementoval rádiovou komunikaci přes LoRa.',
-        en: "I programmed communication protocols for the satellite's firmware and implemented LoRa radio communication.",
+        cs: 'Programoval jsem komunikační protokoly pro firmware satelitu.',
+        en: "I programmed communication protocols for the satellite's firmware.",
       },
       {
         cs: 'Podílel jsem se na návrhových výzvách projektu a spolupracoval s týmem na řešeních pro družicový výzkum.',
@@ -214,7 +214,7 @@ export const projects: Project[] = [
         en: 'ESA mentoring, workshops and test facilities',
       },
     ],
-    tech: ['C', 'C++', 'LoRa', 'Firmware'],
+    tech: ['C', 'C++', 'Firmware'],
     accent: 'mint',
   },
   {
@@ -259,12 +259,11 @@ export const awards: Award[] = [
   {
     name: 'Rakathon',
     year: '2026',
-    result: { cs: 'Finále v Praze', en: 'Finalist · Prague' },
     note: { cs: 'Výzva PillGaze', en: 'PillGaze challenge' },
   },
-  { name: 'AT&T Hackathon Junior', year: '2025' },
-  { name: 'ExxonMobil', year: '2025' },
+  { name: 'ExxonMobil', year: '2026' },
   { name: 'Samsung Solve for Tomorrow', year: '2026' },
+  { name: 'AT&T Hackathon Junior', year: '2025' },
 ]
 
 export const rakathon = {
@@ -304,7 +303,7 @@ export const skills: { group: T; items: string[] }[] = [
   },
   {
     group: { cs: 'Hardware', en: 'Hardware' },
-    items: ['Arduino', 'Raspberry Pi', 'LoRa'],
+    items: ['Arduino', 'Raspberry Pi'],
   },
 ]
 
@@ -317,7 +316,7 @@ export const education = {
 
 export type Photo = { src: string; alt: T; tall?: boolean }
 
-// Order matters: the tall photos sit at positions 3, 6 and 10 so the 3-column dense grid packs into
+// Order matters: the tall photos sit at positions 3 and 6 so the 3-column dense grid packs into
 // exactly 5 full rows (and 7 rows on mobile, where the last tall one renders short).
 export const gallery: Photo[] = [
   { src: 'att-team', alt: { cs: 'AT&T Hackathon Junior 2025 — sledujeme prezentace', en: 'AT&T Hackathon Junior 2025 — watching the pitches' } },
@@ -326,10 +325,11 @@ export const gallery: Photo[] = [
   { src: 'coding', alt: { cs: 'Programování v hledišti', en: 'Coding in the lecture hall' } },
   { src: 'group-1', alt: { cs: 'Všichni účastníci Rakathonu Brno', en: 'All Rakathon Brno participants' } },
   { src: 'finalists', alt: { cs: 'Týmy na pódiu', en: 'Teams on stage' }, tall: true },
+  { src: 'exxon-2nd', alt: { cs: 'ExxonMobil 2026', en: 'ExxonMobil 2026' } },
   { src: 'audience', alt: { cs: 'Publikum při vyhlášení', en: 'The audience during the announcement' } },
   { src: 'pitch-1', alt: { cs: 'Pitch s mikrofonem', en: 'Pitching with the mic' } },
   { src: 'organizer', alt: { cs: 'Úvodní slovo organizátora', en: 'Opening words from the organiser' } },
-  { src: 'crowd', alt: { cs: 'Účastníci a mentoři', en: 'Participants and mentors' }, tall: true },
+  { src: 'crowd', alt: { cs: 'Účastníci a mentoři', en: 'Participants and mentors' } },
   { src: 'lecture-1', alt: { cs: 'Zahájení v aule VUT', en: 'Opening in the VUT auditorium' } },
   { src: 'hall-1', alt: { cs: 'Hosté finále', en: 'Guests at the final' } },
 ]
@@ -384,11 +384,11 @@ export const ui = {
   pauseMotion: { cs: 'Pozastavit animace', en: 'Pause animations' },
   newTab: { cs: 'otevře se v nové kartě', en: 'opens in a new tab' },
   at: { cs: 've firmě', en: 'at' },
-  galleryAside: { cs: 'Rakathon 2026 · AT&T Hackathon 2025', en: 'Rakathon 2026 · AT&T Hackathon 2025' },
+  galleryAside: { cs: 'Rakathon 2026 · AT&T Hackathon 2025 · ExxonMobil 2026', en: 'Rakathon 2026 · AT&T Hackathon 2025 · ExxonMobil 2026' },
   galleryDialog: { cs: 'Fotka z galerie', en: 'Gallery photo' },
   photoStack: { cs: 'Fotky z Rakathonu 2026: pitch, práce v týmu a finalisté na pódiu', en: 'Photos from Rakathon 2026: pitching, teamwork and the finalists on stage' },
   videoLabel: { cs: 'Video z AT&T Hackathonu Junior 2025 — odpočet do konce, bez řeči', en: 'Video from AT&T Hackathon Junior 2025 — the final countdown, no speech' },
-  loraLabel: { cs: 'LoRa ↔ pozemní stanice', en: 'LoRa ↔ ground station' },
+  signalLabel: { cs: 'Satelit ↔ pozemní stanice', en: 'Satellite ↔ ground station' },
   portraitAlt: { cs: 'Tomáš Musil — portrét', en: 'Tomáš Musil — portrait' },
 }
 
