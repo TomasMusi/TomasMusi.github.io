@@ -257,7 +257,7 @@ export type Award = { name: string; result?: T; year?: string; note?: T }
 
 export const awards: Award[] = [
   {
-    name: 'AT&T Hackathon',
+    name: 'AT&T Hackathon Junior',
     year: '2026',
   },
   {
@@ -286,11 +286,11 @@ export const rakathon = {
 }
 
 export const attHack2026 = {
-  title: { cs: 'AT&T Hackathon 2026 — vítězství', en: 'AT&T Hackathon 2026 — we won' } as T,
+  title: { cs: 'AT&T Hackathon Junior 2026 — vítězství', en: 'AT&T Hackathon Junior 2026 — we won' } as T,
   category: { cs: 'Kategorie Best Representation & Idea', en: 'Best Representation & Idea category' } as T,
   body: {
-    cs: 'Rok po prvním AT&T hackathonu jsme se vrátili — a tentokrát odjeli s výhrou v kategorii Best Representation & Idea. Porotu zaujal nápad i to, jak jsme ho dokázali odprezentovat.',
-    en: 'A year after our first AT&T hackathon we came back — and this time we left as winners of the Best Representation & Idea category. The jury liked both the idea and the way we presented it.',
+    cs: 'Rok po prvním AT&T Hackathonu Junior jsme se vrátili — a tentokrát odjeli s výhrou v kategorii Best Representation & Idea. Porotu zaujal nápad i to, jak jsme ho dokázali odprezentovat.',
+    en: 'A year after our first AT&T Hackathon Junior we came back — and this time we left as winners of the Best Representation & Idea category. The jury liked both the idea and the way we presented it.',
   } as T,
   team: 'Tomáš Adam · Davyd Steslavskyi · Jiří Pölzer · Michael Krahula',
 }
@@ -382,8 +382,8 @@ export const ui = {
   moreAbout: { cs: 'Víc o projektu Pill sken', en: 'More about Pill sken' },
   howItWorks: { cs: 'Jak to funguje', en: 'How it works' },
   videoCaption: { cs: 'AT&T Hackathon Junior 2025 — odpočet do konce', en: 'AT&T Hackathon Junior 2025 — the final countdown' },
-  videoCaption2026: { cs: 'AT&T Hackathon 2026 — odpočet do konce', en: 'AT&T Hackathon 2026 — the final countdown' },
-  videoLabel2026: { cs: 'Video z AT&T Hackathonu 2026 — odpočet do konce, bez řeči', en: 'Video from AT&T Hackathon 2026 — the final countdown, no speech' },
+  videoCaption2026: { cs: 'AT&T Hackathon Junior 2026 — odpočet do konce', en: 'AT&T Hackathon Junior 2026 — the final countdown' },
+  videoLabel2026: { cs: 'Video z AT&T Hackathonu Junior 2026 — odpočet do konce, bez řeči', en: 'Video from AT&T Hackathon Junior 2026 — the final countdown, no speech' },
   playVideo: { cs: 'Přehrát video', en: 'Play video' },
   close: { cs: 'Zavřít', en: 'Close' },
   prev: { cs: 'Předchozí', en: 'Previous' },
