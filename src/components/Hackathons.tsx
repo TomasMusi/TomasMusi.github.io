@@ -1,6 +1,6 @@
 import { m, useMotionValue, useScroll, useTransform, type MotionValue } from 'motion/react'
 import { useRef, useState } from 'react'
-import { awards, juniorHack, rakathon, ui } from '../content'
+import { attHack2026, awards, juniorHack, rakathon, ui, type T } from '../content'
 import { useLang } from '../lib/lang'
 import { inView, motionTokens, reveal, stagger } from '../lib/motion'
 import { useMotionPref } from '../lib/motion-pref'
@@ -61,7 +61,9 @@ function StackPhoto({
   )
 }
 
-function Video() {
+type VideoProps = { src: string; poster: string; width: number; height: number; label: T; caption: T }
+
+function Video({ src, poster, width, height, label, caption }: VideoProps) {
   const { t } = useLang()
   const ref = useRef<HTMLVideoElement>(null)
   const [playing, setPlaying] = useState(false)
@@ -80,16 +82,16 @@ function Video() {
 
   return (
     <m.figure className="video" variants={reveal}>
-      <div className="video__frame">
+      <div className="video__frame" style={{ aspectRatio: `${width} / ${height}` }}>
         <video
           ref={ref}
-          src="/media/att-hackathon.mp4"
-          poster="/media/att-poster.webp"
+          src={src}
+          poster={poster}
           preload="none"
           playsInline
-          width={432}
-          height={790}
-          aria-label={t(ui.videoLabel)}
+          width={width}
+          height={height}
+          aria-label={t(label)}
         />
         {!playing && (
           <m.button
@@ -106,7 +108,7 @@ function Video() {
           </m.button>
         )}
       </div>
-      <figcaption className="mono">{t(ui.videoCaption)}</figcaption>
+      <figcaption className="mono">{t(caption)}</figcaption>
     </m.figure>
   )
 }
@@ -139,7 +141,32 @@ export function Hackathons() {
       </m.div>
 
       <m.div className="feature feature--reverse" initial="hidden" whileInView="visible" viewport={inView} variants={stagger()}>
-        <Video />
+        <Video
+          src="/media/att-hackathon-2026.mp4"
+          poster="/media/att-2026-poster.webp"
+          width={432}
+          height={768}
+          label={ui.videoLabel2026}
+          caption={ui.videoCaption2026}
+        />
+        <div className="feature__text">
+          <m.p className="eyebrow mono" variants={reveal}>
+            <span className="dot" aria-hidden /> AT&T · 2026
+          </m.p>
+          <m.h3 variants={reveal}>{t(attHack2026.title)}</m.h3>
+          <m.p className="team mono" variants={reveal}>
+            {t(attHack2026.category)}
+          </m.p>
+          <m.p className="muted feature__body" variants={reveal}>
+            {t(attHack2026.body)}
+          </m.p>
+          <m.p className="team mono feature__body" variants={reveal}>
+            {t(ui.team)}: {attHack2026.team}
+          </m.p>
+        </div>
+      </m.div>
+
+      <m.div className="feature feature--video" initial="hidden" whileInView="visible" viewport={inView} variants={stagger()}>
         <div className="feature__text">
           <m.p className="eyebrow mono" variants={reveal}>
             <span className="dot dot--mint" aria-hidden /> AT&T · 2025
@@ -162,6 +189,14 @@ export function Hackathons() {
             ))}
           </m.ul>
         </div>
+        <Video
+          src="/media/att-hackathon.mp4"
+          poster="/media/att-poster.webp"
+          width={432}
+          height={790}
+          label={ui.videoLabel}
+          caption={ui.videoCaption}
+        />
       </m.div>
     </section>
   )
