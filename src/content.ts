@@ -286,7 +286,7 @@ export const rakathon = {
 }
 
 export const attHack2026 = {
-  title: { cs: 'AT&T Hackathon Junior 2026 — vítězství', en: 'AT&T Hackathon Junior 2026 — we won' } as T,
+  title: { cs: 'AT&T Hackathon Junior 2026', en: 'AT&T Hackathon Junior 2026' } as T,
   category: { cs: 'Kategorie Best Representation & Idea', en: 'Best Representation & Idea category' } as T,
   body: {
     cs: 'Rok po prvním AT&T Hackathonu Junior jsme se vrátili — a tentokrát odjeli s výhrou v kategorii Best Representation & Idea. Porotu zaujal nápad i to, jak jsme ho dokázali odprezentovat.',
