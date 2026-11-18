@@ -1610,9 +1610,6 @@ main:focus {
     grid-template-columns: 1fr;
     gap: 8px;
   }
-  .gallery li.is-tall--wide-only {
-    grid-row: auto;
-  }
   .gallery {
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 160px;

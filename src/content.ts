@@ -330,8 +330,8 @@ export const education = {
 
 export type Photo = { src: string; alt: T; tall?: boolean; wide?: boolean }
 
-// Order matters: with the tall photos at positions 3, 6 and 16 and the wide ones at 10 and 15, the
-// 3-column dense grid packs into exactly 7 full rows (and 10 rows on mobile, where the last tall one renders short).
+// Order matters: 3 tall (2 rows) + 3 wide (2 cols) + 12 regular photos = 24 cells, so the dense grid
+// packs into exactly 8 full rows on desktop (3 columns) and 12 rows on mobile (2 columns).
 export const gallery: Photo[] = [
   { src: 'att-team', alt: { cs: 'AT&T Hackathon Junior 2025 — sledujeme prezentace', en: 'AT&T Hackathon Junior 2025 — watching the pitches' } },
   { src: 'pitch-2', alt: { cs: 'Prezentace řešení před porotou', en: 'Pitching our solution to the jury' } },
@@ -347,8 +347,10 @@ export const gallery: Photo[] = [
   { src: 'crowd', alt: { cs: 'Účastníci a mentoři', en: 'Participants and mentors' } },
   { src: 'lecture-1', alt: { cs: 'Zahájení v aule VUT', en: 'Opening in the VUT auditorium' } },
   { src: 'hall-1', alt: { cs: 'Hosté finále', en: 'Guests at the final' } },
-  { src: 'sprint-team', alt: { cs: 'Samsung Innovation Sprint 2026 — ladíme řešení v týmu', en: 'Samsung Innovation Sprint 2026 — fine-tuning our solution as a team' }, wide: true },
   { src: 'att-hall', alt: { cs: 'AT&T Hackathon Junior 2025 — programujeme do noci', en: 'AT&T Hackathon Junior 2025 — coding into the night' }, tall: true },
+  { src: 'sprint-team', alt: { cs: 'Samsung Innovation Sprint 2026 — ladíme řešení v týmu', en: 'Samsung Innovation Sprint 2026 — fine-tuning our solution as a team' }, wide: true },
+  { src: 'att-2026-pitch', alt: { cs: 'AT&T Hackathon Junior 2026 — prezentujeme naše řešení', en: 'AT&T Hackathon Junior 2026 — presenting our solution' } },
+  { src: 'att-2026-awards', alt: { cs: 'AT&T Hackathon Junior 2026 — přebíráme cenu Best Representation & Idea', en: 'AT&T Hackathon Junior 2026 — collecting the Best Representation & Idea award' }, wide: true },
 ]
 
 export const ui = {
@@ -403,7 +405,7 @@ export const ui = {
   pauseMotion: { cs: 'Pozastavit animace', en: 'Pause animations' },
   newTab: { cs: 'otevře se v nové kartě', en: 'opens in a new tab' },
   at: { cs: 've firmě', en: 'at' },
-  galleryAside: { cs: 'Samsung Innovation Sprint 2026 · Rakathon 2026 · AT&T Hackathon 2025 · ExxonMobil 2026', en: 'Samsung Innovation Sprint 2026 · Rakathon 2026 · AT&T Hackathon 2025 · ExxonMobil 2026' },
+  galleryAside: { cs: 'Samsung Innovation Sprint 2026 · AT&T Hackathon 2026 · Rakathon 2026 · AT&T Hackathon 2025 · ExxonMobil 2026', en: 'Samsung Innovation Sprint 2026 · AT&T Hackathon 2026 · Rakathon 2026 · AT&T Hackathon 2025 · ExxonMobil 2026' },
   galleryDialog: { cs: 'Fotka z galerie', en: 'Gallery photo' },
   photoStack: { cs: 'Fotky z Rakathonu 2026: pitch, práce v týmu a finalisté na pódiu', en: 'Photos from Rakathon 2026: pitching, teamwork and the finalists on stage' },
   videoLabel: { cs: 'Video z AT&T Hackathonu Junior 2025 — odpočet do konce, bez řeči', en: 'Video from AT&T Hackathon Junior 2025 — the final countdown, no speech' },

@@ -105,7 +105,6 @@ export function Gallery() {
   const { t } = useLang()
   const [open, setOpen] = useState<number | null>(null)
   const close = useCallback(() => setOpen(null), [])
-  const lastTall = gallery.findLastIndex((p) => p.tall)
   const step = useCallback((d: number) => setOpen((i) => (i === null ? i : (i + d + gallery.length) % gallery.length)), [])
 
   return (
@@ -115,7 +114,7 @@ export function Gallery() {
         {gallery.map((p, i) => (
           <m.li
             key={p.src}
-            className={p.tall ? (i === lastTall ? 'is-tall is-tall--wide-only' : 'is-tall') : p.wide ? 'is-wide' : ''}
+            className={p.tall ? 'is-tall' : p.wide ? 'is-wide' : undefined}
             initial={{ opacity: 0, y: motionTokens.distance.lg, scale: 0.96 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={inView}
